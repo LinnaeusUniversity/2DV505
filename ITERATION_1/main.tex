@@ -1,0 +1,88 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{hyperref}
+\title{Iteration 1: Current Trends in Software Engineering}
+\author{Rashed Qazizada (rq222ah,  Mutasem Salloum(ms227fm)}
+\date{course: 2DV505 - Current Topics within Computer Science}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+The field of software engineering is evolving rapidly, with modern architectures like microservices and serverless computing emerging as dominant trends. These approaches, along with the shift from traditional monolithic architectures, represent significant advances in scalability, maintainability, and flexibility. 
+
+This report aims to investigate how these \textbf{current trends in software engineering} — particularly microservices and serverless computing — improve the scalability and maintainability of backend systems, as well as the challenges they introduce compared to traditional monolithic architectures \cite{DATTA2024104762, UNLU2024107334, GIMENOSARROCA2024104764}.
+
+\section{Research Question (RQ)}
+
+We aim to explore the following research question: 
+\begin{quote}
+\textit{How do modern backend architectures, such as microservices and serverless computing, improve scalability and maintainability, and what difficulties or obstacles arise when using these architectures compared to traditional monolithic architectures?}
+\end{quote}
+% \subsection{Why answering the research question is important?}
+
+
+\subsection{Why answering this RQ is important}
+\begin{itemize}
+    \item \textbf{Relevance}: Understanding how microservices and serverless architectures impact scalability and maintainability is essential as companies adopt these architectures.
+    \item \textbf{Current Trend}: The shift from monolithic systems to cloud-native architectures is a significant trend in modern development.
+    \item \textbf{Broad Applicability}: This research applies to industries relying on scalable web applications, cloud services, and high-traffic platforms.
+\end{itemize}
+
+
+\subsubsection{Breakdown and Explanation of the RQ}
+\begin{itemize}
+    \item \textbf{Microservices Architecture}: Breaking down a monolithic system into smaller, independent services that communicate through APIs. Microservices improve scalability, as services can be developed, deployed, and scaled independently.
+    \item \textbf{Serverless Computing}: Serverless computing abstracts infrastructure management, allowing developers to focus on writing functions. It handles scalability and resource provisioning automatically.
+\end{itemize}
+
+\subsubsection{Improvement in Scalability and Maintainability}
+\begin{itemize}
+    \item \textbf{Scalability}: Microservices and serverless computing enable independent scaling of services (in microservices) and automatic scaling (in serverless), whereas monolithic systems require scaling the entire application.
+    \item \textbf{Maintainability}: Microservices offer modularity for independent updates, while serverless computing reduces the infrastructure management burden.
+\end{itemize}
+
+\subsubsection{Challenges Compared to Traditional Monolithic Architectures}
+\begin{itemize}
+    \item \textbf{Monolithic Architecture}: Monolithic systems bundle the entire application into one codebase, making scaling and maintenance harder as complexity grows.
+    \item \textbf{Challenges in Microservices}: Managing inter-service communication, operational complexity, and consistency issues.
+    \item \textbf{Challenges in Serverless}: Cold start latency, lack of control over infrastructure, and vendor lock-in.
+\end{itemize}
+
+\subsection{Planned Activities}
+\begin{itemize}
+    \item Literature Review: We will review selected papers on microservices and serverless architectures.
+    \item Comparative Analysis: We will compare modern architectures with monolithic systems and identify the challenges and solutions.
+    \item Case Studies: We will include real-world examples, such as Netflix and AWS, to explore how they have overcome scalability and maintainability issues.
+\end{itemize}
+
+\subsection{Expected Results}
+We expect to show that microservices and serverless architectures offer more scalable and maintainable solutions compared to monolithic systems, but they also introduce new challenges, such as cold start latency and increased complexity.
+
+\subsection{Journals}
+The following research articles from tier 2 journals (as ranked by the Norwegian List) support our research question:
+
+\begin{itemize}
+    \item \textbf{Somoshree Datta, Sourav Kanti Addya, Soumya K. Ghosh}. (2024). \textit{ESMA: Towards elevating system happiness in a decentralized serverless edge computing framework}. Journal of Parallel and Distributed Computing, 183, 104762. DOI: \href{https://doi.org/10.1016/j.jpdc.2023.104762}{https://doi.org/10.1016/j.jpdc.2023.104762}. \\ Relevant Sections: Pages 100-105, Section 2.
+
+\item \textbf{Hüseyin Ünlü, Dhia Eddine Kennouche, Görkem Kılınç Soylu, Onur Demirörs}. (2024). \textit{Microservice-based projects in agile world: A structured interview}. Information and Software Technology, 165, 107334. \\DOI: \href{https://doi.org/10.1016/j.infsof.2023.107334}{https://doi.org/10.1016/j.infsof.2023.107334}. \\ Relevant Sections: Pages 1-6, Sections 1-3.
+
+
+    \item \textbf{Pablo Gimeno Sarroca, Marc Sánchez-Artigas}. (2024).\textit{MLLess: Achieving cost efficiency in serverless machine learning training}. Journal of Parallel and Distributed Computing, 183, 104764. DOI: \href{https://doi.org/10.1016/j.jpdc.2023.104764}{https://doi.org/10.1016/j.jpdc.2023.104764}. \\ Relevant Sections: Pages 205-210, Section 4.
+
+    \item \textbf{Keqin Li}. (2024). \textit{Scheduling independent tasks on multiple cloud-assisted edge servers with energy constraint}. Journal of Parallel and Distributed Computing, 184, 104781. DOI: \href{https://doi.org/10.1016/j.jpdc.2023.104781}{https://doi.org/10.1016/j.jpdc.2023.104781}. \\ Relevant Sections: Pages 130-135, Section 5.
+
+    \item \textbf{Daniel Rosendo, Alexandru Costan, Patrick Valduriez, Gabriel Antoniu}. (2022). \textit{Distributed intelligence on the Edge-to-Cloud Continuum: A systematic literature review}. Journal of Parallel and Distributed Computing, 166, 71-94. DOI: \href{https://doi.org/10.1016/j.jpdc.2022.04.004}{https://doi.org/10.1016/j.jpdc.2022.04.004}. \\ Relevant Sections: Pages 75-80, Section 6.
+\end{itemize}
+
+
+\newpage
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
