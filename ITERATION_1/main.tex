@@ -1,88 +1,175 @@
 \documentclass[a4paper, 12pt]{article}
-
+\usepackage[top=0.5in, bottom=1in, left=1in, right=1in]{geometry} % Updated margins to reduce top space
+\usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{mathptmx}  % Times New Roman font style
 \usepackage{geometry}
-\geometry{a4paper, margin=1in}
-\usepackage{hyperref}
-\title{Iteration 1: Current Trends in Software Engineering}
-\author{Rashed Qazizada (rq222ah,  Mutasem Salloum(ms227fm)}
-\date{course: 2DV505 - Current Topics within Computer Science}
+\title{2DV505 - Current Topics within Computer Science - S2 Work Plan}
+\author{Student 1: Mutasem Salloum (ms227fm) \\ Student 2: Rashed Qazizada (rq222ah)}
+\date{}
 
 \begin{document}
 
 \maketitle
 
 \section{Introduction}
-The field of software engineering is evolving rapidly, with modern architectures like microservices and serverless computing emerging as dominant trends. These approaches, along with the shift from traditional monolithic architectures, represent significant advances in scalability, maintainability, and flexibility. 
+For this assignment, we have chosen option 2 (Research Question Proposal).
 
-This report aims to investigate how these \textbf{current trends in software engineering} — particularly microservices and serverless computing — improve the scalability and maintainability of backend systems, as well as the challenges they introduce compared to traditional monolithic architectures \cite{DATTA2024104762, UNLU2024107334, GIMENOSARROCA2024104764}.
-
-\section{Research Question (RQ)}
-
-We aim to explore the following research question: 
-\begin{quote}
-\textit{How do modern backend architectures, such as microservices and serverless computing, improve scalability and maintainability, and what difficulties or obstacles arise when using these architectures compared to traditional monolithic architectures?}
-\end{quote}
-% \subsection{Why answering the research question is important?}
-
-
-\subsection{Why answering this RQ is important}
 \begin{itemize}
-    \item \textbf{Relevance}: Understanding how microservices and serverless architectures impact scalability and maintainability is essential as companies adopt these architectures.
-    \item \textbf{Current Trend}: The shift from monolithic systems to cloud-native architectures is a significant trend in modern development.
-    \item \textbf{Broad Applicability}: This research applies to industries relying on scalable web applications, cloud services, and high-traffic platforms.
+    \item \textbf{Research Question:} What are the current methodologies and approaches used to achieve reusability in self-adaptive software systems, and what are the benefits and challenges of implementing reusable components in these systems?
+    \item \textbf{Bibliographic Details in IEEE Format:}
+    \begin{enumerate}
+        \item N. Abbas, J. Andersson, and D. Weyns, ``ASPLe: A methodology to develop self-adaptive software systems with systematic reuse,'' \textit{Journal of Systems and Software}, vol. 167, p. 110626, 2020. DOI: \url{https://doi.org/10.1016/j.jss.2020.110626}.
+        \item S. Korra, V. Biksham, K. Vinaykumar, and T. Bhaskar, ``Code-level self-adaptive approach for building reusable software components,'' in \textit{Intelligent Computing and Applications}, B. N. K. Rao, R. Balasubramanian, S. Wang, and R. Nayak, Eds., pp. 49--57. Springer Nature Singapore, 2023. DOI: \url{https://doi.org/10.1007/978-981-19-41627_6}.
+        \item I. Pekaric, R. Groner, T. Witte, J. G. Adigun, A. Raschke, M. Felderer, and M. Tichy, ``A systematic review on security and safety of self-adaptive systems,'' \textit{Journal of Systems and Software}, vol. 203, p. 111716, 2023. DOI: \url{https://doi.org/10.1016/j.jss.2023.111716}.
+    \end{enumerate}
+    \item \textbf{Supporting Sections and Paragraphs:}
+    % \begin{itemize}
+    %     \item Section 1: Methodologies for Reusability (paragraphs 3-5): Discusses various methodologies that can achieve reusability in self-adaptive systems, providing insights into effective strategies for implementation.
+    %     \item Section 1: Methodologies for Reusability (paragraph 1): Outlines the advantages of using reusable components in adaptive systems, highlighting how they can enhance efficiency and flexibility.
+    %     \item Section 2: Code-level self-adaptive approach for building reusable software components, advantages in adaptive systems compared to conventional software systems (paragraph 6.2).
+    %     \item Section 3: Challenges in Implementation (paragraph 5.5): Examines the challenges in the context of safety and security of self-adaptive systems, addressing critical issues such as security and compatibility that relate directly to the research question.
+    % \end{itemize}
+
+\begin{itemize}
+    \item \textbf{ASPLe: A methodology to develop self-adaptive software systems with systematic reuse} by N. Abbas et al.:
+    \begin{itemize}
+        \item \textbf{Section 5.2 to 5.5:} Discusses different methods used to make software reusable, focusing on how the ASPLe process works in self-adaptive systems. This supports the different approaches to achieving reusability.
+        \item \textbf{Section 6.7 (Discussion):} Talks about the problems faced when trying to make components reusable, especially issues related to security and managing changes, which directly supports the question about challenges.
+    \end{itemize}
+    \item \textbf{A systematic review on security and safety of self-adaptive systems} by I. Pekaric et al.:
+    \begin{itemize}
+        \item \textbf{Section 2.3.3 and 2.3.4:} Provides information about potential risks and safety factors, which are important for understanding the challenges in making reusable components safe.
+        \item \textbf{Section 4.4 (Classification and analysis):} Explains how the authors checked the reliability of the information about security and safety, helping to ensure the findings are accurate.
+    \end{itemize}
+    \item \textbf{Intelligent Computing and Applications - Code-level self-adaptive approach for building reusable software components} by S. Korra et al.:
+    \begin{itemize}
+        \item \textbf{Section 6.2:} Explains the benefits of using reusable components in adaptive systems compared to regular software systems. This supports understanding how these methods work at the code level.
+    \end{itemize}
+\end{itemize}
+
 \end{itemize}
 
 
-\subsubsection{Breakdown and Explanation of the RQ}
-\begin{itemize}
-    \item \textbf{Microservices Architecture}: Breaking down a monolithic system into smaller, independent services that communicate through APIs. Microservices improve scalability, as services can be developed, deployed, and scaled independently.
-    \item \textbf{Serverless Computing}: Serverless computing abstracts infrastructure management, allowing developers to focus on writing functions. It handles scalability and resource provisioning automatically.
-\end{itemize}
-
-\subsubsection{Improvement in Scalability and Maintainability}
-\begin{itemize}
-    \item \textbf{Scalability}: Microservices and serverless computing enable independent scaling of services (in microservices) and automatic scaling (in serverless), whereas monolithic systems require scaling the entire application.
-    \item \textbf{Maintainability}: Microservices offer modularity for independent updates, while serverless computing reduces the infrastructure management burden.
-\end{itemize}
-
-\subsubsection{Challenges Compared to Traditional Monolithic Architectures}
-\begin{itemize}
-    \item \textbf{Monolithic Architecture}: Monolithic systems bundle the entire application into one codebase, making scaling and maintenance harder as complexity grows.
-    \item \textbf{Challenges in Microservices}: Managing inter-service communication, operational complexity, and consistency issues.
-    \item \textbf{Challenges in Serverless}: Cold start latency, lack of control over infrastructure, and vendor lock-in.
-\end{itemize}
-
-\subsection{Planned Activities}
-\begin{itemize}
-    \item Literature Review: We will review selected papers on microservices and serverless architectures.
-    \item Comparative Analysis: We will compare modern architectures with monolithic systems and identify the challenges and solutions.
-    \item Case Studies: We will include real-world examples, such as Netflix and AWS, to explore how they have overcome scalability and maintainability issues.
-\end{itemize}
-
-\subsection{Expected Results}
-We expect to show that microservices and serverless architectures offer more scalable and maintainable solutions compared to monolithic systems, but they also introduce new challenges, such as cold start latency and increased complexity.
-
-\subsection{Journals}
-The following research articles from tier 2 journals (as ranked by the Norwegian List) support our research question:
+\subsection*{Overview of the Topic}
+In modern software engineering, self-adaptive systems are a crucial topic, enabling different applications to autonomously adjust to changing environments or conditions. This adaptability is extremely important in dynamic environments like cloud computing and IoT, where responsiveness is key.
 
 \begin{itemize}
-    \item \textbf{Somoshree Datta, Sourav Kanti Addya, Soumya K. Ghosh}. (2024). \textit{ESMA: Towards elevating system happiness in a decentralized serverless edge computing framework}. Journal of Parallel and Distributed Computing, 183, 104762. DOI: \href{https://doi.org/10.1016/j.jpdc.2023.104762}{https://doi.org/10.1016/j.jpdc.2023.104762}. \\ Relevant Sections: Pages 100-105, Section 2.
+    \item \textbf{Self-Adaptation:} A system with the ability to monitor and adjust its behavior without human intervention, ensuring optimal performance despite external or internal changes.
+    \item \textbf{Reusability:} Breaking the adaptive system into smaller decoupled components that can be treated and reused individually, which reduces development time and costs. This is crucial for creating flexible and efficient self-adaptive systems.
+    \item \textbf{Methodologies for Reusability:} Approaches such as ASPLe provide structured methods to develop reusable components, promoting modular design.
+    \item \textbf{Implementation Challenges:} While reusability offers benefits, it also presents challenges, particularly in security and safety, as highlighted in reviews on self-adaptive systems.
+\end{itemize}
 
-\item \textbf{Hüseyin Ünlü, Dhia Eddine Kennouche, Görkem Kılınç Soylu, Onur Demirörs}. (2024). \textit{Microservice-based projects in agile world: A structured interview}. Information and Software Technology, 165, 107334. \\DOI: \href{https://doi.org/10.1016/j.infsof.2023.107334}{https://doi.org/10.1016/j.infsof.2023.107334}. \\ Relevant Sections: Pages 1-6, Sections 1-3.
+\section{Objective and Scope}
+\subsection*{Objective}
+This work aims to investigate the current methodologies and approaches that are being used to achieve reusability in self-adaptive systems. Additionally, this research will address the associated benefits and challenges of implementing reusable components.
 
+\subsection*{Scope}
+This study will focus on the following aspects:
+\begin{itemize}
+    \item \textbf{Methodologies for Reusability:} Examining existing frameworks and methodologies that facilitate the development of reusable components in self-adaptive systems.
+    \item \textbf{Benefits of Reusable Components:} Analyzing how reusability in self-adaptive systems contributes to efficiency, flexibility, and reduced development costs.
+    \item \textbf{Challenges and Risks:} Investigating security, safety, and integration issues related to reusing components, as these are critical for maintaining system integrity and performance.
+\end{itemize}
 
-    \item \textbf{Pablo Gimeno Sarroca, Marc Sánchez-Artigas}. (2024).\textit{MLLess: Achieving cost efficiency in serverless machine learning training}. Journal of Parallel and Distributed Computing, 183, 104764. DOI: \href{https://doi.org/10.1016/j.jpdc.2023.104764}{https://doi.org/10.1016/j.jpdc.2023.104764}. \\ Relevant Sections: Pages 205-210, Section 4.
+\subsection*{Limitations}
+The study will be limited to peer-reviewed articles published in tier 2 journals between 2020 and 2024 to ensure that the findings are based on the most relevant and recent research.
 
-    \item \textbf{Keqin Li}. (2024). \textit{Scheduling independent tasks on multiple cloud-assisted edge servers with energy constraint}. Journal of Parallel and Distributed Computing, 184, 104781. DOI: \href{https://doi.org/10.1016/j.jpdc.2023.104781}{https://doi.org/10.1016/j.jpdc.2023.104781}. \\ Relevant Sections: Pages 130-135, Section 5.
+\section{Planned Activities and Research Methods}
+\begin{enumerate}
+    \item \textbf{Literature Review:} Conduct a comprehensive review of peer-reviewed articles focusing on reusability in self-adaptive software systems. This will include analyzing recent studies published between 2020 and 2024 to identify key methodologies, benefits, and challenges.
+    \item \textbf{Case Study Analysis:} Identify and evaluate real-world examples of self-adaptive systems that successfully implement reusable components. This will involve examining documented case studies to understand practical applications and outcomes.
+    \item \textbf{Comparative Analysis:} Compare and contrast methodologies and findings across different studies. This will involve assessing how various approaches address the challenges of reusability and the effectiveness of implemented strategies.
+    \item \textbf{Synthesis of Findings:} Compile and synthesize findings from the literature review and case studies to create a comprehensive overview of the current state of reusability in self-adaptive software systems.
+\end{enumerate}
 
-    \item \textbf{Daniel Rosendo, Alexandru Costan, Patrick Valduriez, Gabriel Antoniu}. (2022). \textit{Distributed intelligence on the Edge-to-Cloud Continuum: A systematic literature review}. Journal of Parallel and Distributed Computing, 166, 71-94. DOI: \href{https://doi.org/10.1016/j.jpdc.2022.04.004}{https://doi.org/10.1016/j.jpdc.2022.04.004}. \\ Relevant Sections: Pages 75-80, Section 6.
+\section{Expected Outcomes}
+For Option 2 (Research Question Proposal), the expected outcomes are to learn more about how to make software components reusable in self-adaptive systems, understand the benefits, and identify the challenges.
+
+\subsection*{Expected Results}
+\begin{itemize}
+    \item Understand the methods used to make software reusable, including structured approaches like ASPLe and other code-level techniques.
+    \item Learn about the advantages of reusing software, such as saving time, reducing costs, and making systems more flexible to changes.
+    \item Identify the challenges, particularly in areas like security and safety, when trying to reuse components.
+\end{itemize}
+
+\subsection*{Supporting Evidence}
+\begin{itemize}
+    \item Evidence will come from the selected journal articles listed in Section 1: Introduction, under the subsection \textbf{Bibliographic Details in IEEE Format}.
+    \item Analysis of real-life examples will also help demonstrate how these methods are used in practice.
 \end{itemize}
 
 
-\newpage
-\bibliographystyle{IEEEtran}
-\bibliography{references}
+\subsection*{Reporting Findings}
+\begin{itemize}
+    \item The findings will be organized into three main parts: methods for reusability, benefits of reusability, and challenges in adopting these methods.
+    \item A summary will be made from both the literature and real-life examples to show a full picture of reusability in adaptive systems.
+\end{itemize}
+
+
+\section{Potential Threats and Risks}
+\subsection*{Identify Risks}
+\begin{enumerate}
+    \item \textbf{Complexity of Research:} The methods used in different studies can be hard to understand because of the technical details, which could make the research challenging.
+    \item \textbf{Difficulty in Getting Clear Answers:} The topic of reusability in self-adaptive systems is still developing. Therefore, the available information may not fully answer all parts of the research question, especially regarding safety and security issues.
+    \item \textbf{Lack of Real-Life Examples:} There may not be enough real-world examples of using reusable components in these systems, which could make it hard to generalize the results.
+\end{enumerate}
+
+\subsection*{Mitigation Strategies}
+\begin{enumerate}
+    \item \textbf{Dealing with Complexity:} We will seek help from our supervisors when facing difficult technical details and break down complex methods into smaller, manageable parts.
+    \item \textbf{Adapting to Unclear Answers:} We will expand our data collection efforts and document any unanswered areas, providing an explanation in our report.
+    \item \textbf{Handling Limited Data Availability:} If we face limited data, we will adjust our timeline to allow for more extensive literature research where necessary.
+\end{enumerate}
+
+
+\section{Timeline}
+\subsection*{Milestones}
+\begin{enumerate}
+    \item \textbf{Literature Review Summary Completion:} Completed – The research articles about reusability in adaptive systems have been read and summarized.
+    \item \textbf{Data Collection:} By November 1, 2024 – Collect detailed information from selected articles, focusing on key methodologies, benefits, and challenges. Ensure data is relevant for supporting the research question.
+    \item \textbf{Midterm Report Draft:} By November 15, 2024 – Submit a draft of the midterm report, focusing on analysis and findings, and address feedback from Iteration 1.
+    \item \textbf{Revisions and Feedback Integration:} By December 1, 2024 – Revise the draft based on supervisor feedback, ensuring all weaknesses are addressed.
+    \item \textbf{Final Report Preparation:} By December 20, 2024 – Finalize the report, ensuring it meets all requirements, including addressing all research questions and findings.
+    \item \textbf{Submission of Final Report:} By January 12, 2025 – Submit the final report.
+    \item \textbf{Presentation Preparation and Delivery:} January 13-17, 2025 – Prepare and deliver a presentation summarizing the key points of the final report.
+\end{enumerate}
+
+
+\section{Preliminary Structure of the Final Report}
+\begin{enumerate}
+    \item \textbf{Introduction}
+    \begin{itemize}
+        \item Introduce the topic of self-adaptive software systems and the significance of reusability.
+        \item Present the research question and objectives of the study.
+        \item Outline the importance of understanding methodologies, benefits, and challenges associated with reusability.
+    \end{itemize}
+    \item \textbf{Methodology}
+    \begin{itemize}
+        \item Describe the research design, including literature review techniques and case study analysis.
+        \item Explain data collection methods, such as qualitative interviews with industry experts.
+        \item Detail the systematic approach taken to analyze and synthesize the findings.
+    \end{itemize}
+    \item \textbf{Results}
+    \begin{itemize}
+        \item Present the key findings from the literature review, including identified methodologies and their effectiveness.
+        \item Summarize data from case studies that illustrate the benefits and challenges of reusability.
+        \item Include quantitative metrics and qualitative insights as evidence.
+    \end{itemize}
+    \item \textbf{Discussion}
+    \begin{itemize}
+        \item Analyze the implications of the findings, comparing and contrasting methodologies.
+        \item Discuss the benefits and challenges in depth, using case study examples to provide context.
+        \item Explore the relationship between reusability and overall system performance, flexibility, and security.
+    \end{itemize}
+    \item \textbf{Conclusion and Future Directions}
+    \begin{itemize}
+        \item Summarize the main conclusions drawn from the research.
+        \item Highlight the practical implications for software engineering practices.
+        \item Provide recommendations for future research, addressing identified gaps and challenges related to reusability in self-adaptive software systems.
+    \end{itemize}
+\end{enumerate}
 
 \end{document}
