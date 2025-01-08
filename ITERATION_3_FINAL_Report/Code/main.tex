@@ -34,11 +34,10 @@
 \begin{document}
 
 \maketitle
-
 \begin{abstract}
-This report investigates two core research questions: (1) What are the current methodologies and approaches for achieving reusability and security in self-adaptive software systems (SAS)? and (2) What are the benefits and challenges of implementing secure and reusable components in these systems? The study examines frameworks such as Autonomic Software Product Line Engineering (ASPLe) and code-level adaptation methods, which support modularity, flexibility, and adaptability. Key findings indicate that reusability significantly reduces development costs and enhances resilience but requires integrated security measures to mitigate risks in critical environments. This research highlights the importance of combining systematic reuse strategies with security-focused metrics to build adaptable and secure SAS. Future directions include automating component evaluation processes and tailoring reuse methodologies to domain-specific needs.
+This report investigates two core research questions: (1) What are the current methodologies and approaches for achieving reusability and security in self-adaptive software systems (SAS)? and (2) What are the benefits and challenges of implementing secure and reusable components in these systems? The study examines frameworks such as Autonomic Software Product Line Engineering (ASPLe) and code-level adaptation methods, which support modularity, flexibility, and adaptability. Key findings indicate that reusability significantly reduces development costs and enhances resilience but requires integrated security measures to mitigate risks in critical environments. Additionally, this study identifies critical safety and security challenges in reuse practices for SAS and proposes strategies to address these issues, including adaptable safety certifications, standardized modeling frameworks, and dynamic validation techniques. Future directions include automating component evaluation processes and tailoring reuse methodologies to domain-specific needs.
 \end{abstract}
-
+% End of abstract section
 \section{Introduction}
 
 As modern software systems grow in complexity, there is a rising demand for systems that can adapt autonomously to dynamic conditions. Self-adaptive systems (SAS) are designed to meet this need, allowing software to monitor, analyse, and adjust its behaviour based on environmental changes without human intervention. In critical areas such as healthcare, cloud computing, and autonomous vehicles, this capability is essential to maintain continuous functionality despite shifting requirements or unexpected conditions. Achieving this adaptability efficiently requires the reuse of modular components that can be applied across various contexts, reducing both development time and costs.
@@ -46,7 +45,6 @@ As modern software systems grow in complexity, there is a rising demand for syst
 This report investigates two research questions central to the advancement of SAS:
 
 \begin{itemize}
-  
     \item \textbf{RQ1:} What are the current methodologies and approaches used to achieve reusability and security in self-adaptive software systems?
         \item \textbf{RQ2:} What are the benefits and challenges of implementing secure and reusable components in self-adaptive software systems?
 \end{itemize}
@@ -55,28 +53,28 @@ To address these questions, we need to understand a few concepts:
 
 \begin{itemize}
     \item \textbf{Self-Adaptive Software System (SASS):} A system that can modify its behaviour and structure in response to changes in its environment, its own internal state, or its goals.
-    
     \item \textbf{ASPLe (Autonomic Software Product Line Engineering):} ASPLe organizes SAS development into domain engineering, specialization, and integration stages, promoting systematic reuse of components across different applications. This modular approach saves time and supports consistent quality by allowing components to be adapted with minimal effort.
-    
     \item \textbf{Code-level adaptation methods:} This strategy focuses on reusability at the coding level, allowing adaptation within specific modules. Code-level adaptation enables flexibility on a smaller scale, complementing the higher-level reusability of frameworks like ASPLe, though it may encounter scalability challenges in larger systems.
-    
 \end{itemize}
 
-The motivation behind these research questions originates from the need to balance adaptability and security in SAS. While reusability can enhance efficiency and resilience, the absence of integrated security measures in reusable components can create potential vulnerabilities, particularly in critical environments. This study investigates the methodologies for reusability and the essential role of security in the development and application of self-adaptive software systems. This report provides insights into these challenges and suggests future directions for enhancing SAS with more secure and flexible reusable components, offering a foundation for further research on building robust adaptive systems that can evolve with changing conditions.
+The motivation behind these research questions originates from the need to balance adaptability and security in SAS. While reusability can enhance efficiency and resilience, the absence of integrated security measures in reusable components can create potential vulnerabilities, particularly in critical environments. Furthermore, reusing components, models, or architectures introduces unique safety and security challenges, including certification issues, increased complexity, and dynamic environment misalignment. This report also explores these challenges and proposes strategies to mitigate them, contributing to the development of more secure and adaptable SAS.
+
+% End of Introduction section
+
 \section{Approach or Method}
 
 To explore and answer the research questions, we conducted a literature review focusing on recent studies related to self-adaptive systems (SAS), particularly those emphasizing modularity, reuse, and adaptive security. In alignment with the project’s requirements, all articles were selected from Norwegian List Level 2 journals, ensuring a high standard of peer-reviewed quality and relevance in the field.
 
 \subsection{Literature Review}
 
-The literature review involved exploring academic databases, including IEEE Xplore, ScienceDirect, and SpringerLink, using search terms such as “self-adaptive systems,” “reuse,” “security,” and related terms. Articles were selected based on their relevance to the research questions and publication date (2020–2024). The review aimed to highlight methodologies, challenges, and opportunities in achieving reusability and security within self-adaptive systems.
+The literature review involved exploring academic databases, including IEEE Xplore, ScienceDirect, and SpringerLink, using search terms such as “self-adaptive systems,” “reuse,” “security,” and related terms. Articles were selected based on their relevance to the research questions and publication date (2020–2024). The review aimed to highlight methodologies, challenges, and opportunities in achieving reusability and security within self-adaptive systems. In addition, the review also examined critical safety and security challenges associated with reuse practices, emphasizing their implications for dynamic and interconnected environments.
 
 \begin{enumerate}
-    \item \textbf{ASPLe:} A methodology for reuse in self-adaptive systems, detailing a structured approach for developing reusable components \cite{Nadeem2020}.
+    \item \textbf{N. Abbas, J. Andersson, and D. Weyns,} “A methodology to develop self-adaptive software systems with systematic reuse,” \emph{Journal of Systems and Software} \cite{Nadeem2020}.
     
-    \item \textbf{Security and safety in SAS:} This article discusses security challenges in adaptive systems, especially in high-risk environments \cite{Pekaric2023}.
+    \item \textbf{Pekaric, R. Groner, et al.,} “A systematic review on security and safety of self-adaptive systems,” \emph{Journal of Systems \& Software} \cite{Pekaric2023}.
     
-    \item \textbf{Code-level adaptation for SAS:} This study examines code-level techniques to enhance flexibility and adaptability within SAS, complementing broader reuse strategies \cite{Korra2022}.
+    \item \textbf{S. Korra, V. Biksham, and T. Bhaskar,} “Code-level self-adaptive approach for building reusable software components,” in \emph{Intelligent Computing and Applications} \cite{Korra2022}.
 \end{enumerate}
 
 \subsection{Analyzing Methodologies}
@@ -89,12 +87,12 @@ Each methodology was analyzed for its contributions to modularity, adaptability,
     \item \textbf{Code-Level Adaptation Techniques:} These techniques focus on adaptable coding practices to enable flexibility at a more granular level. Code-level adaptation is particularly beneficial for implementing fine-grained adjustments within specific modules, complementing the broader reuse strategy provided by frameworks like ASPLe \cite{Korra2022}.
 \end{itemize}
 
-This literature review provides a foundational understanding of the methodologies, challenges, and practices critical to addressing the research questions on reusability and security in SAS.
+This literature review provides a foundational understanding of the methodologies, challenges, and practices critical to addressing the research questions on reusability and security in SAS. Additionally, it identifies unique risks and mitigation strategies associated with safety and security challenges in reuse, which are further discussed in subsequent sections.
 
-
+% End of Approach or Method section
 \section{Results}
 
-This section presents the findings related to the research questions on reusable methodologies in self-adaptive systems (SAS). The results highlight the ASPLe methodology, a proposed algorithm for adaptive component development, and component metrics for evaluation, emphasizing original insights derived from the analysis.
+This section presents the findings related to the research questions on reusable methodologies in self-adaptive systems (SAS). The results highlight the ASPLe methodology, a proposed algorithm for adaptive component development, component metrics for evaluation, and safety and security challenges in reuse, emphasizing original insights derived from the analysis.
 
 \subsection{ASPLe Methodology}
 
@@ -137,21 +135,18 @@ The proposed algorithm provides a systematic approach to developing reusable com
 
 Through analysis of ASPLe and the proposed algorithm, this study identifies the following insights:
 \begin{itemize}
-    \item \textbf{Criticality of Metrics} Incorporating detailed metrics ensures components meet adaptability and reliability criteria, reducing risks in SAS deployment.
-    \item \textbf{Integration Challenges} Seamless integration of reusable components requires advanced dependency management and robust testing frameworks.
-    \item \textbf{Security in Reuse} Security measures must be embedded during component development, not as an afterthought, to address vulnerabilities.
+    \item \textbf{Criticality of Metrics:} Incorporating detailed metrics ensures components meet adaptability and reliability criteria, reducing risks in SAS deployment.
+    \item \textbf{Integration Challenges:} Seamless integration of reusable components requires advanced dependency management and robust testing frameworks.
+    \item \textbf{Security in Reuse:} Security measures must be embedded during component development, not as an afterthought, to address vulnerabilities.
+    \item \textbf{Safety and Security Challenges:} Reuse amplifies challenges like certification validity, increased complexity, and dynamic environment misalignment, emphasizing the need for adaptable safety certifications and rigorous validation frameworks.
 \end{itemize}
-
-These insights pave the way for developing more secure and adaptable SAS, addressing gaps in existing methodologies and advancing practical implementation strategies.
 
 \subsection{Summary of Findings}
 
-The results demonstrate that systematic reuse methodologies, when combined with robust evaluation and integration processes, can significantly improve adaptability and security in SAS. By leveraging ASPLe and adaptive component development algorithms, SAS can meet dynamic system requirements while maintaining high standards of quality and resilience.
-
-
-
+The results demonstrate that systematic reuse methodologies, when combined with robust evaluation and integration processes, can significantly improve adaptability and security in SAS. By leveraging ASPLe, adaptive component development algorithms, and addressing reuse challenges, SAS can meet dynamic system requirements while maintaining high standards of quality and resilience.
 
 % End of Results section
+
 \section{Discussion}
 
 The findings underscore the practical benefits and challenges associated with implementing reusable components in self-adaptive systems (SAS). This discussion interprets the results, reflects on their implications, and suggests areas for future research.
@@ -160,43 +155,76 @@ The findings underscore the practical benefits and challenges associated with im
 
 The ASPL strategy, ASPLe methodology, and the proposed algorithm provide a comprehensive view of current methodologies for achieving reusability in SAS. However, the lack of integrated security highlights a significant challenge that must be addressed to ensure the safe deployment of SAS in sensitive environments.
 
-Our analysis highlights the \textbf{critical role of metrics} in component evaluation. Metrics such as CEM and CRM are indispensable for ensuring adaptability, reliability, and scalability. Furthermore, embedding security measures during component evaluation—not as an afterthought—is essential to mitigate potential vulnerabilities in adaptive systems. This insight extends prior work by emphasizing security integration as a primary consideration during reuse, which has been underexplored in existing methodologies.
+In addition, the safety and security challenges associated with reuse, such as certification validity, lack of standardized models, and vulnerabilities in dynamic environments, further emphasize the need for robust frameworks. These challenges not only complicate reuse but also increase the risk of system failure if not addressed during the design and evaluation phases.
 
 \subsection{Implications for Practice}
 
 Implementing these methodologies and algorithms can lead to more efficient software development processes, particularly in domains where adaptability and reliability are critical. Organizations can benefit from reduced development time and costs by reusing well-tested components and combining real-time responsiveness with ASPLe’s systematic reuse and the proposed algorithm’s code-level adaptability.
 
-To address identified challenges, organizations should consider adopting:
+However, the challenges identified in this study suggest that organizations must prioritize:
 \begin{itemize}
-    \item \textbf{Dependency Management Frameworks:} Tools that automate the resolution of component dependencies to streamline integration and testing.
-    \item \textbf{Real-Time Metric Evaluation Tools:} Systems that enable dynamic assessment of components, ensuring reliability and adaptability in changing conditions.
-    \item \textbf{Integrated Security Protocols:} Processes to embed security considerations during the design, evaluation, and adaptation of components.
+    \item \textbf{Safety Certification Updates:} Adapting certifications to account for evolving system behaviors post-reuse.
+    \item \textbf{Standardized Modeling Frameworks:} Ensuring compatibility and consistency during component integration.
+    \item \textbf{Dynamic Validation Techniques:} Continuously testing reused components in dynamic and partially observable environments to mitigate risks.
 \end{itemize}
+
 \subsection{Comparison with Existing Literature}
 
 Our findings confirm the importance of modularity and reuse in software engineering, as highlighted in prior research. The ASPLe methodology advances traditional software product line engineering by introducing self-adaptive properties, effectively addressing a gap noted in earlier studies \cite{Nadeem2020}. Additionally, the proposed algorithm enhances this by focusing on code-level adaptations, providing a detailed, practical approach that complements higher-level reuse strategies. 
 
-This study distinguishes itself by emphasizing the critical need to integrate security into reuse practices, a consideration often neglected in existing frameworks. By addressing this gap, the research offers new perspectives on how adaptability and security can be balanced effectively in the development of SAS.
+This study distinguishes itself by emphasizing the critical need to integrate security into reuse practices, a consideration often neglected in existing frameworks. Furthermore, by categorizing safety and security challenges in reuse, it highlights specific areas where existing methodologies fall short, such as certification adaptation and dynamic environment compatibility. These insights contribute to bridging the gap between adaptability and security in SAS development.
 
 \subsection{Limitations and Future Work}
 
-Despite the benefits, several limitations exist. First, evaluating components using multiple metrics can be time-intensive, potentially slowing down the development process. Second, dependency issues during component integration can lead to unforeseen challenges, particularly in large-scale or legacy systems.
+Despite the benefits, several limitations exist. First, evaluating components using multiple metrics can be time-intensive, potentially slowing down the development process. Second, dependency issues during component integration can lead to unforeseen challenges, particularly in large-scale or legacy systems. Lastly, ensuring the security of reused architectures requires continuous updates and rigorous testing, which can increase overhead.
 
-Future research should focus on developing \textbf{automated tools} to streamline the evaluation process and reduce the time required. Customizing metrics for specific domains would enhance their relevance and effectiveness, while improved documentation and training could mitigate integration issues. Additionally, integrating security metrics directly into reuse methodologies can address vulnerabilities more effectively.
+Future research should focus on developing \textbf{automated tools} to streamline the evaluation process and reduce the time required. Customizing metrics for specific domains would enhance their relevance and effectiveness, while improved documentation and training could mitigate integration issues. Additionally, integrating safety and security metrics directly into reuse methodologies can address vulnerabilities more effectively.
 
 \textbf{Proposed Research Directions:}
 \begin{itemize}
     \item Development of domain-specific metrics for adaptive systems.
     \item Automation of component evaluation and dependency resolution.
-    \item Incorporation of security-focused protocols in adaptive frameworks.
+    \item Incorporation of security-focused protocols and dynamic validation techniques in adaptive frameworks.
+    \item Enhanced safety certification processes for reused components to account for evolving system contexts.
 \end{itemize}
 
+
 % End of Discussion section
+
+
+
+\section{Safety and Security Challenges in Reuse}
+
+The safety and security challenges of self-adaptive systems (SAS), as identified in selected studies \cite{Pekaric2023}, can be categorized into five main areas: adaptation, environment, system, combined safety and security considerations, and other. These challenges arise from the inherent complexity and interconnected nature of SAS.
+
+Adaptive systems that rely on reuse—where components, models, or architectures from previously developed systems are integrated into new contexts—face unique challenges, particularly in dynamic and unpredictable environments. Reuse often amplifies safety and security challenges in the following ways:
+
+\begin{itemize}
+    \item \textbf{Safety Certification Issues:} Reused components may lose validity of their safety certifications post-adaptation, especially in dynamic environments where systems evolve in response to changing conditions.
+    \item \textbf{Lack of Standardized Models:} The absence of standardized methods for modeling adaptation processes complicates the reuse of components, increasing the risk of vulnerabilities.
+    \item \textbf{Dynamic Environment Misalignment:} Components not originally designed for dynamic, partially observable environments may introduce vulnerabilities when reused in adaptive systems.
+    \item \textbf{Increased Complexity:} Reuse adds to system complexity, requiring additional design effort to ensure components from diverse contexts work cohesively.
+    \item \textbf{Security Vulnerabilities:} Reused architectures may carry pre-existing vulnerabilities, which attackers can exploit if not adequately updated and hardened.
+\end{itemize}
+
+\textbf{Proposed Solutions:}
+To mitigate these challenges, several strategies can be employed:
+\begin{enumerate}
+    \item Develop adaptable safety certifications to account for evolving behaviors post-reuse.
+    \item Standardize modeling frameworks for consistency and seamless integration.
+    \item Harden reused components against emerging security threats through rigorous updates and testing.
+    \item Integrate safety and security considerations during the design phase of reused elements.
+    \item Employ dynamic validation techniques to continuously assess reliability and adaptability.
+\end{enumerate}
+% End of Safety and Security section
 \section{Conclusion}
 
 This study investigated methodologies for achieving reusability and security in self-adaptive systems (SAS), focusing on the ASPL strategy, ASPLe methodology, and a proposed algorithm for adaptive component development. The findings highlight that reusability significantly reduces development time and costs while enhancing adaptability and scalability. Metrics such as CEM and CRM play a critical role in evaluating component suitability, and embedding security measures during reuse is essential for mitigating vulnerabilities in sensitive applications.
 
-Despite these benefits, challenges such as dependency management, adaptation complexity, and the lack of integrated security measures require further attention. Future research should focus on automating component evaluation, integrating security-focused metrics, and tailoring reuse methodologies to domain-specific needs. Addressing these challenges will enable the development of more adaptable, secure, and efficient SAS capable of meeting evolving demands across industries.
+Additionally, the study identified critical safety and security challenges associated with reuse in SAS. These include the loss of certification validity, increased system complexity, and vulnerabilities in dynamic environments. Addressing these challenges requires adaptable safety certifications, standardized modeling frameworks, and dynamic validation techniques to ensure reused components meet evolving system requirements.
+
+Future research should focus on automating component evaluation, integrating security-focused metrics, and tailoring reuse methodologies to domain-specific needs. By addressing these challenges, the development of more adaptable, secure, and efficient SAS will be possible, enabling such systems to meet the evolving demands of industries where reliability and safety are paramount.
+
 
 
 % End of Conclusion section
